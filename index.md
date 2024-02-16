@@ -1,12 +1,10 @@
 ---
 title: "UGA Econometrics Reading Group"
-theme: united
 ---
 
+# UGA Econometrics Reading Group
 
 ## Spring 2024 Schedule
-
-
 
 {% assign current_semester = "Spring 2024" %}
 <table>
