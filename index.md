@@ -6,25 +6,6 @@ theme: united
 
 ## Spring 2024 Schedule
 
-{{ site.data.presentations | inspect }}
-
-{% for item in site.data.presentations %}
-  <p>Test</p>
-{% endfor %}
-
-{% for item in site.data.presentations.presentations %}
-  <p>Test</p>
-{% endfor %}
-
-{% for presentation in site.data.presentations %}
-  <p>{{ presentation | inspect }}</p>
-{% endfor %}
-
-
-{% for presentation in site.data.presentations %}
-  <p>{{ presentation.title }}</p>
-{% endfor %}
-
 
 
 {% assign current_semester = "Spring 2024" %}
@@ -38,7 +19,7 @@ theme: united
   </tr>
   {% for presentation in site.data.presentations %}
     <tr>
-      <td>{{ presentation.date }}</td>
+      <td>{{ presentation.date | date: "%A, %b. %-d"}}</td>
       <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
       <td>{{ presentation.location }}</td>
       <td>{{ presentation.leader }}</td>
