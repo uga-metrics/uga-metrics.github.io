@@ -1,0 +1,23 @@
+# Site settings
+title: UGA Econometrics Reading Group
+email: brantly.callaway@uga.edu
+description: >- # this means to ignore newlines until "baseurl:"
+  A site to keep track of what's going on with the Econometrics Reading Group at UGA
+baseurl: "" # the subpath of your site, e.g., /blog
+url: "http://uga-erg.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from production build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle
+  - vendor/cache
+  - vendor/gems
+  - vendor/ruby
