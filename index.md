@@ -12,6 +12,10 @@ theme: united
   <p>Test</p>
 {% endfor %}
 
+{% for item in site.data.presentations.presentations %}
+  <p>Test</p>
+{% endfor %}
+
 {% for presentation in site.data.presentations %}
   <p>{{ presentation | inspect }}</p>
 {% endfor %}
