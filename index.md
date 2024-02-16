@@ -29,7 +29,7 @@ presentation.semester == current_semester %}
 {{ presentation.date }}
 </td>
 <td>
-{{ presentation.start-time}}–{{ presentation.end-time}}
+{{ presentation\[‘start-time’\]}}–{{ presentation\[‘end-time’\]}}
 </td>
 <td>
 {{ presentation.location }}

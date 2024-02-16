@@ -29,7 +29,7 @@ knitr::opts_chunk$set(echo = TRUE)
     {% if presentation.semester == current_semester %}
       <tr>
         <td>{{ presentation.date }}</td>
-        <td>{{ presentation.start-time}}--{{ presentation.end-time}}</td>
+        <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
         <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
