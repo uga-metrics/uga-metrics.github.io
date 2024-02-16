@@ -8,6 +8,15 @@ theme: united
 
 {{ site.data.presentations | inspect }}
 
+{% for item in site.data.presentations %}
+  <p>Test</p>
+{% endfor %}
+
+{% for presentation in site.data.presentations %}
+  <p>{{ presentation | inspect }}</p>
+{% endfor %}
+
+
 {% for presentation in site.data.presentations %}
   <p>{{ presentation.title }}</p>
 {% endfor %}
