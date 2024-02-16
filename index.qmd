@@ -1,6 +1,8 @@
 ---
 title: "UGA Econometrics Reading Group"
-format: html
+format:
+  md:
+    variant: gfm
 theme: united
 css: "style.css"
 embed-resources: true
