@@ -6,6 +6,9 @@ theme: united
 
 ## Spring 2024 Schedule
 
+{{ site.data.presentations | inspect }}
+
+
 {% assign current_semester = "Spring 2024" %}
 <table>
   <tr>
