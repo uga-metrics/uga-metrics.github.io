@@ -8,6 +8,17 @@ theme: united
 
 {{ site.data.presentations | inspect }}
 
+<table>
+  <tr>
+    <th>Location</th>
+  </tr>
+  {% for presentation in site.data.presentations %}
+    <tr>
+      <td>{{ presentation.location }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
 
 {% assign current_semester = "Spring 2024" %}
 <table>
