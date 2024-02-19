@@ -26,6 +26,7 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Oft
       <td>{{ seminar.date | date: "%A, %b. %-d"}}</td>
       <td>{{ seminar.speaker }}</td>
       <td>{{ seminar.affiliation }}</td>
+	   <td>{{ seminar.host }}</td>
       <td><a href="{{ seminar.link }}">{{ seminar.title }}</a></td>
     </tr>
   {% endfor %}
