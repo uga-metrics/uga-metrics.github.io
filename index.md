@@ -34,9 +34,33 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Oft
 
 ## Reading Group
 
-The Econometrics Reading Group is our internal reading group.  Please see below for our Spring 2024 schedule.
+The Econometrics Reading Group is our internal reading group. Please see below for our current and upcoming schedules.
 
-The organizer for this semester is [Hugo Sant'Anna](https://hsantanna.org/).  If you would like to present or be added to our mailing list, please contact Hugo.
+The organizer for this semester is [Hugo Sant'Anna](https://hsantanna.org/). If you would like to present or be added to our mailing list, please contact Hugo.
+
+### Summer 2024 Schedule
+
+{% assign current_semester = "Summer 2024" %}
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+    <th>Leader</th>
+    <th>Title</th>
+  </tr>
+  {% for presentation in site.data.erg %}
+    {% if presentation.semester == current_semester %}
+      <tr>
+        <td>{{ presentation.date | date: "%A, %b. %-d"}}</td>
+        <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
+        <td>{{ presentation.location }}</td>
+        <td>{{ presentation.leader }}</td>
+        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
 
 ### Spring 2024 Schedule
 
@@ -50,12 +74,89 @@ The organizer for this semester is [Hugo Sant'Anna](https://hsantanna.org/).  If
     <th>Title</th>
   </tr>
   {% for presentation in site.data.erg %}
-    <tr>
-      <td>{{ presentation.date | date: "%A, %b. %-d"}}</td>
-      <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
-      <td>{{ presentation.location }}</td>
-      <td>{{ presentation.leader }}</td>
-      <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
-    </tr>
+    {% if presentation.semester == current_semester %}
+      <tr>
+        <td>{{ presentation.date | date: "%A, %b. %-d"}}</td>
+        <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
+        <td>{{ presentation.location }}</td>
+        <td>{{ presentation.leader }}</td>
+        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+      </tr>
+    {% endif %}
   {% endfor %}
 </table>
+
+### Fall 2023 Schedule
+
+{% assign current_semester = "Fall 2023" %}
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+    <th>Leader</th>
+    <th>Title</th>
+  </tr>
+  {% for presentation in site.data.erg %}
+    {% if presentation.semester == current_semester %}
+      <tr>
+        <td>{{ presentation.date | date: "%A, %b. %-d"}}</td>
+        <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
+        <td>{{ presentation.location }}</td>
+        <td>{{ presentation.leader }}</td>
+        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+
+### Spring 2023 Schedule
+
+{% assign current_semester = "Spring 2023" %}
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+    <th>Leader</th>
+    <th>Title</th>
+  </tr>
+  {% for presentation in site.data.erg %}
+    {% if presentation.semester == current_semester %}
+      <tr>
+        <td>{{ presentation.date | date: "%A, %b. %-d"}}</td>
+        <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
+        <td>{{ presentation.location }}</td>
+        <td>{{ presentation.leader }}</td>
+        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+
+
+
+### Fall 2022 Schedule
+
+{% assign current_semester = "Fall 2022" %}
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Location</th>
+    <th>Leader</th>
+    <th>Title</th>
+  </tr>
+  {% for presentation in site.data.erg %}
+    {% if presentation.semester == current_semester %}
+      <tr>
+        <td>{{ presentation.date | date: "%A, %b. %-d"}}</td>
+        <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
+        <td>{{ presentation.location }}</td>
+        <td>{{ presentation.leader }}</td>
+        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+
