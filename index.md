@@ -36,7 +36,7 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Oft
 
 The Econometrics Reading Group is our internal reading group. Please see below for our current and upcoming schedules.
 
-The organizers for this semester is [Hugo Sant'Anna](https://hsantanna.org/) or [Derek Dyal](https://www.terry.uga.edu/directory/derek-dyal/). If you would like to present or be added to our mailing list, please contact them.
+The organizers for this semester is [Hugo Sant'Anna](https://hsantanna.org/) and [Derek Dyal](https://www.terry.uga.edu/directory/derek-dyal/). If you would like to present or be added to our mailing list, please contact them.
 
 
 ### Fall 2024 Schedule
