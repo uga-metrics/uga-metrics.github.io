@@ -10,9 +10,9 @@ The UGA Econ department will host the following econometrics seminars during the
 
 Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Often, we are able to hold one or two meeting slots with the seminar speaker for external faculty---just get in touch with the host several days before the seminar date to request a meeting slot.
 
-### Spring 2024 Schedule
+### Fall 2024 Schedule
 
-{% assign current_semester = "Spring 2024" %}
+{% assign current_semester = "Fall 2024" %}
 <table>
   <tr>
     <th>Date</th>
@@ -36,7 +36,7 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Oft
 
 The Econometrics Reading Group is our internal reading group. Please see below for our current and upcoming schedules.
 
-The organizer for this semester is [Hugo Sant'Anna](https://hsantanna.org/). If you would like to present or be added to our mailing list, please contact Hugo.
+The organizer for this semester is [Derek Dyal]([https://hsantanna.org/](https://www.terry.uga.edu/directory/derek-dyal/)). If you would like to present or be added to our mailing list, please contact Derek.
 
 ### Summer 2024 Schedule
 
