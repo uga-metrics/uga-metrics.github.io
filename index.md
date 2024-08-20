@@ -38,6 +38,7 @@ The Econometrics Reading Group is our internal reading group. Please see below f
 
 The organizers for this semester is [Hugo Sant'Anna](https://hsantanna.org/) or [Derek Dyal](https://www.terry.uga.edu/directory/derek-dyal/). If you would like to present or be added to our mailing list, please contact them.
 
+
 ### Fall 2024 Schedule
 
 {% assign current_semester = "Fall 2024" %}
