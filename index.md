@@ -10,6 +10,28 @@ The UGA Econ department will host the following econometrics seminars during the
 
 Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Often, we are able to hold one or two meeting slots with the seminar speaker for external faculty---just get in touch with the host several days before the seminar date to request a meeting slot.
 
+### Fall 2024 Schedule
+
+{% assign current_semester = "Spring 2024" %}
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Speaker</th>
+    <th>Affiliaton</th>
+	<th>Host</th>
+    <th>Paper</th>
+  </tr>
+  {% for seminar in site.data.seminars %}
+    <tr>
+      <td>{{ seminar.date | date: "%A, %b. %-d"}}</td>
+      <td>{{ seminar.speaker }}</td>
+      <td>{{ seminar.affiliation }}</td>
+	   <td>{{ seminar.host }}</td>
+      <td><a href="{{ seminar.link }}">{{ seminar.title }}</a></td>
+    </tr>
+  {% endfor %}
+</table>
+
 ### Spring 2024 Schedule
 
 {% assign current_semester = "Spring 2024" %}
