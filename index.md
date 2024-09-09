@@ -12,7 +12,7 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Oft
 
 ### Fall 2024 Schedule
 
-{% assign current_semester = "Spring 2024" %}
+{% assign current_semester = "Fall 2024" %}
 <table>
   <tr>
     <th>Date</th>
