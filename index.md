@@ -6,7 +6,7 @@ title: "Econometrics at UGA"
 
 ## Seminars
 
-The UGA Econ department will host the following econometrics seminars during the Spring 2024 semester.  For Spring 2024, seminars are held from 4:00--5:15 in Orkin Hall D107.
+The UGA Econ department will host the following econometrics seminars during the Fall 2024 semester.  For Fall 2024, seminars are held from 4:00--5:15 in Benson Hall C101.
 
 Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Often, we are able to hold one or two meeting slots with the seminar speaker for external faculty---just get in touch with the host several days before the seminar date to request a meeting slot.
 
