@@ -18,7 +18,7 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Oft
     <th>Date</th>
     <th>Speaker</th>
     <th>Affiliaton</th>
-	<th>Host</th>
+    <th>Host</th>
     <th>Paper</th>
   </tr>
   {% for seminar in site.data.seminars %}
@@ -46,13 +46,15 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Oft
     <th>Paper</th>
   </tr>
   {% for seminar in site.data.seminars %}
-    <tr>
-      <td>{{ seminar.date | date: "%A, %b. %-d"}}</td>
-      <td>{{ seminar.speaker }}</td>
-      <td>{{ seminar.affiliation }}</td>
-	   <td>{{ seminar.host }}</td>
-      <td><a href="{{ seminar.link }}">{{ seminar.title }}</a></td>
-    </tr>
+    {% if seminar.semester == current_semester %}
+	<tr>
+      		<td>{{ seminar.date | date: "%A, %b. %-d"}}</td>
+      		<td>{{ seminar.speaker }}</td>
+      		<td>{{ seminar.affiliation }}</td>
+		<td>{{ seminar.host }}</td>
+      		<td><a href="{{ seminar.link }}">{{ seminar.title }}</a></td>
+    	</tr>
+    {% endif %}
   {% endfor %}
 </table>
 
