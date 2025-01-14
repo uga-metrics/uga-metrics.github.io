@@ -46,7 +46,7 @@ The organizers for this semester is [Derek Dyal](https://www.terry.uga.edu/direc
 
 ### Fall 2025 Schedule
 
-{% assign current_semester = "Fall 2025" %}
+{% assign current_semester = "Spring 2025" %}
 <table>
   <tr>
     <th>Date</th>
