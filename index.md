@@ -6,9 +6,9 @@ title: "Econometrics at UGA"
 
 ## Seminars
 
-The UGA Econ department will host the following econometrics seminars during the Fall 2024 semester.  For Fall 2024, seminars are held from 4:00--5:15 in Benson Hall C101.
+The UGA Econ department will host the following econometrics seminars during the Spring 2025 semester. For Spring 2024, seminars are held from 4:00--5:15 in Correll Hall 214.
 
-Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Often, we are able to hold one or two meeting slots with the seminar speaker for external faculty---just get in touch with the host several days before the seminar date to request a meeting slot.
+Economics faculty in the greater Atlanta/Athens area are welcome to attend. Often, we are able to hold one or two meeting slots with the seminar speaker for external faculty---just get in touch with the host several days before the seminar date to request a meeting slot.
 
 ### Fall 2024 Schedule
 
@@ -41,12 +41,12 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend.  Oft
 
 The Econometrics Reading Group is our internal reading group. Please see below for our current and upcoming schedules.
 
-The organizers for this semester is [Hugo Sant'Anna](https://hsantanna.org/) and [Derek Dyal](https://www.terry.uga.edu/directory/derek-dyal/). If you would like to present or be added to our mailing list, please contact them.
+The organizers for this semester is [Derek Dyal](https://www.terry.uga.edu/directory/derek-dyal/). If you would like to present or be added to our mailing list, please contact Derek.
 
 
-### Fall 2024 Schedule
+### Fall 2025 Schedule
 
-{% assign current_semester = "Fall 2024" %}
+{% assign current_semester = "Fall 2025" %}
 <table>
   <tr>
     <th>Date</th>
