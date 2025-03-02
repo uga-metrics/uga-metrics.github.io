@@ -41,7 +41,7 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend. Ofte
 
 The Econometrics Reading Group is our internal reading group. Please see below for our current and upcoming schedules.
 
-The organizers for this semester is [Derek Dyal](https://www.terry.uga.edu/directory/derek-dyal/). If you would like to present or be added to our mailing list, please contact Derek.
+The organizer for this semester is [Derek Dyal](https://www.terry.uga.edu/directory/derek-dyal/). If you would like to present or be added to our mailing list, please contact Derek.
 
 
 ### Fall 2025 Schedule
