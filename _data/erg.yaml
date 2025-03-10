@@ -192,9 +192,9 @@
   start-time: "12:00"
   end-time: "1:30"
   location: "Terry BLC A400 Boyd Conference Room"
-  leader: "TBD"
-  title: "TBD"
-  link: "---"
+  leader: "Brantly Callaway"
+  title: "Instrumented Difference-in-Differences with Heterogeneous Treatment Effects"
+  link: "https://arxiv.org/abs/2405.12083"
 
 - semester: "Spring 2025"
   date: "2025-03-19"
