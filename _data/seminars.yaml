@@ -1,3 +1,11 @@
+- semester: "Fall 2025"
+  date: "2024-09-02"
+  speaker: "Alex Torgovitsky"
+  affiliation: "University of Chicago"
+  host: "Brantly Callaway"
+  title: "Supply and Demand in Heterogeneous Markets"
+  link: "https://a-torgovitsky.github.io/"
+
 - semester: "Spring 2025"
   date: "2024-04-15"
   speaker: "Hao Dong"
@@ -28,7 +36,7 @@
   affiliation: "University of Wisconsin-Madison"
   host: ""
   title: "Quantifying Non-Sampling Variation: College Quality and the Garden of Forking Paths"
-  link: ""
+  link: "https://sites.google.com/site/econjeffsmith/home"
 
 - semester: "Fall 2024"
   date: "2024-09-24"
