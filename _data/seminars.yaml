@@ -1,5 +1,13 @@
 - semester: "Fall 2025"
-  date: "2024-09-02"
+  date: "2025-10-21"
+  speaker: "Marcelo Moreira"
+  affiliation: "FGV School of Economics"
+  host: "Carol Caetano"
+  title: ""
+  link: "https://sites.google.com/site/moreiramarceloj/"
+
+- semester: "Fall 2025"
+  date: "2025-09-02"
   speaker: "Alex Torgovitsky"
   affiliation: "University of Chicago"
   host: "Brantly Callaway"
@@ -7,7 +15,7 @@
   link: "https://a-torgovitsky.github.io/"
 
 - semester: "Spring 2025"
-  date: "2024-04-15"
+  date: "2025-04-15"
   speaker: "Hao Dong"
   affiliation: "Southern Methodist University"
   host: "Brantly Callaway"
@@ -15,7 +23,7 @@
   link: "https://arxiv.org/pdf/2209.05914"
 
 - semester: "Spring 2025"
-  date: "2024-04-08"
+  date: "2025-04-08"
   speaker: "Andres Santos"
   affiliation: "UCLA"
   host: "Carol Caetano"
@@ -23,7 +31,7 @@
   link: "http://www.econ.ucla.edu/andres/pdfs/PotOutcomes.pdf"
 
 - semester: "Spring 2025"
-  date: "2024-04-01"
+  date: "2025-04-01"
   speaker: "Rodrigo Pinto"
   affiliation: "University of Southern Florida"
   host: "Carol Caetano"
@@ -31,7 +39,7 @@
   link: "https://www.rodrigopinto.net/_files/ugd/95d94d_2f83dc6ff5a947ec976df1e32fdd0b15.pdf"
 
 - semester: "Spring 2025"
-  date: "2024-02-18"
+  date: "2025-02-18"
   speaker: "Jeffrey Smith"
   affiliation: "University of Wisconsin-Madison"
   host: ""
