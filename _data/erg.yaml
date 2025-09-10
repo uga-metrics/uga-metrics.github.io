@@ -228,9 +228,9 @@
   start-time: "12:00"
   end-time: "1:30"
   location: "Correll 402 Glover Board Room"
-  leader: "TBA"
-  title: "TBA"
-  link: "TBA"
+  leader: "Hugo Sant'Anna"
+  title: "Difference-in-differences with Bad Controls"
+  link: "https://hsantanna.org/workingpapers/badcontrols"
 
 - semester: "Fall 2025"
   date: "2025-11-13"
