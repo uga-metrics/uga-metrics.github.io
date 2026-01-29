@@ -243,8 +243,8 @@
 
 - semester: "Spring 2026"
   date: "2026-02-20"
-  start-time: "11:00"
-  end-time: "12:30"
+  start-time: "11:00AM"
+  end-time: "12:30PM"
   location: "Ivester Hall E007"
   leader: "TBA"
   title: "TBA"
@@ -252,8 +252,8 @@
 
 - semester: "Spring 2026"
   date: "2026-02-27"
-  start-time: "11:00"
-  end-time: "12:30"
+  start-time: "11:00AM"
+  end-time: "12:30PM"
   location: "Ivester Hall E007"
   leader: "TBA"
   title: "TBA"
@@ -261,8 +261,8 @@
 
 - semester: "Spring 2026"
   date: "2026-03-20"
-  start-time: "11:00"
-  end-time: "12:30"
+  start-time: "11:00AM"
+  end-time: "12:30PM"
   location: "Ivester Hall E007"
   leader: "TBA"
   title: "TBA"
