@@ -6,13 +6,13 @@ title: "Econometrics at UGA"
 
 ## Seminars
 
-The UGA Econ department will host the following econometrics seminars during the Spring 2026 semester. For Spring 2026, seminars are held from 3:00--4:15 in Orkin Hall D107.
+The UGA Econ department will host the following econometrics seminars during the Fall 2026 semester. For Fall 2026, seminars are held from 2:55--4:15 in Orkin Hall D107.
 
 Economics faculty in the greater Atlanta/Athens area are welcome to attend. Often, we are able to hold one or two meeting slots with the seminar speaker for external faculty---just get in touch with the host several days before the seminar date to request a meeting slot.
 
-### Spring 2026 Schedule
+### Fall 2026 Schedule
 
-{% assign current_semester = "Spring 2026" %}
+{% assign current_semester = "Fall 2026" %}
 <table>
   <tr>
     <th>Date</th>
@@ -44,9 +44,9 @@ The Econometrics Reading Group is our internal reading group. Please see below f
 The organizer for this semester is [Derek Dyal](https://www.terry.uga.edu/directory/derek-dyal/). If you would like to present or be added to our mailing list, please contact Derek.
 
 
-### Spring 2026 Schedule
+### Fall 2026 Schedule
 
-{% assign current_semester = "Spring 2026" %}
+{% assign current_semester = "Fall 2026" %}
 <table>
   <tr>
     <th>Date</th>
