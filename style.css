@@ -10,6 +10,7 @@ a {
 
 .seminar-table {
   width: 100%;
+  min-width: 850px;
   table-layout: auto;
 }
 
@@ -21,4 +22,5 @@ a {
 .seminar-table th:last-child,
 .seminar-table td:last-child {
   white-space: normal;
+  min-width: 250px;
 }
