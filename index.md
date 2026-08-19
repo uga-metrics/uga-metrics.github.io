@@ -2,6 +2,8 @@
 title: "Econometrics at UGA"
 ---
 
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
 # Econometrics at UGA
 
 ## Seminars
