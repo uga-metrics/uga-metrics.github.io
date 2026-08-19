@@ -17,3 +17,8 @@ a {
 .seminar-table td {
   white-space: nowrap;
 }
+
+.seminar-table th:last-child,
+.seminar-table td:last-child {
+  white-space: normal;
+}
