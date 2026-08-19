@@ -18,7 +18,7 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend. Ofte
   <tr>
     <th>Date</th>
     <th>Speaker</th>
-    <th>Affiliaton</th>
+    <th>Affiliation</th>
     <th>Host</th>
     <th>Paper</th>
   </tr>
