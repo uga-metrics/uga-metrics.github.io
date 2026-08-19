@@ -13,7 +13,8 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend. Ofte
 ### Fall 2026 Schedule
 
 {% assign current_semester = "Fall 2026" %}
-<table>
+<div class="seminar-table-wrapper">
+<table class="seminar-table">
   <tr>
     <th>Date</th>
     <th>Speaker</th>
@@ -33,6 +34,7 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend. Ofte
     {% endif %}
   {% endfor %}
 </table>
+</div>
 
 [[Past Seminars](past_seminars)]
 
