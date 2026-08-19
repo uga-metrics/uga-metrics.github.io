@@ -2,3 +2,18 @@ a {
   color: steelblue;
   text-decoration: underline;
 }
+
+.seminar-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.seminar-table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.seminar-table th,
+.seminar-table td {
+  white-space: nowrap;
+}
