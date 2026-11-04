@@ -1,0 +1,97 @@
+{%- comment -%}
+=============================================================================
+Title: iCalendar feed template
+Description: Renders an RFC 5545 calendar from a _data/ list. Only talks dated
+  on or after site.calendar_start are included.
+  Arguments: series ("seminar" or "erg"), talks (list), name (calendar name).
+Author: Brant Callaway
+Last update: 2026-11-04
+Date created: 2026-11-04
+=============================================================================
+{%- endcomment -%}
+{%- capture ics_lf %}
+{% endcapture -%}
+
+{%- comment -%}
+DTSTAMP must be in UTC, which Liquid cannot format directly. Shifting the epoch
+by the local offset makes the local-time formatter print the UTC clock time.
+{%- endcomment -%}
+{%- assign ics_offset_hours = site.time | date: "%z" | divided_by: 100 -%}
+{%- assign ics_shift = ics_offset_hours | times: 3600 -%}
+{%- assign ics_stamp = site.time | date: "%s" | minus: ics_shift | date: "%Y%m%dT%H%M%SZ" -%}
+
+{%- capture ics_body %}
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Econometrics at UGA//Talk Schedule//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:{{ include.name }}
+X-WR-TIMEZONE:America/New_York
+REFRESH-INTERVAL;VALUE=DURATION:PT6H
+X-PUBLISHED-TTL:PT6H
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20070311T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20071104T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+{% for ics_talk in include.talks %}
+{% assign ics_date = ics_talk.date | date: "%Y-%m-%d" %}
+{% if ics_date >= site.calendar_start %}
+{% include calendar_event_vars.html series=include.series talk=ics_talk %}
+{% comment %} RFC 5545 text escaping: backslash first, so later escapes are not doubled. {% endcomment %}
+{% assign ics_summary = cal_summary | strip_newlines | replace: "\", "\\" | replace: ";", "\;" | replace: ",", "\," %}
+{% assign ics_details = cal_details | strip_newlines | replace: "\", "\\" | replace: ";", "\;" | replace: ",", "\," | replace: "@@", "\n" %}
+{% assign ics_location = cal_location | strip_newlines | replace: "\", "\\" | replace: ";", "\;" | replace: ",", "\," %}
+BEGIN:VEVENT
+UID:{{ include.series }}-{{ cal_date_compact }}@uga-metrics.github.io
+DTSTAMP:{{ ics_stamp }}
+{% if cal_timed %}
+DTSTART;TZID=America/New_York:{{ cal_start_compact }}
+DTEND;TZID=America/New_York:{{ cal_end_compact }}
+{% else %}
+DTSTART;VALUE=DATE:{{ cal_start_compact }}
+DTEND;VALUE=DATE:{{ cal_end_compact }}
+{% endif %}
+SUMMARY:{{ ics_summary }}
+{% if ics_location != "" %}
+LOCATION:{{ ics_location }}
+{% endif %}
+DESCRIPTION:{{ ics_details }}
+END:VEVENT
+{% endif %}
+{% endfor %}
+END:VCALENDAR
+{% endcapture -%}
+
+{%- comment -%}
+The calendar format requires CRLF line endings and lines of at most 75 bytes.
+Long lines continue on the next line after a leading space. Chunks of 60
+characters leave room for accented characters, which take two bytes.
+{%- endcomment -%}
+{%- assign ics_lines = ics_body | split: ics_lf -%}
+{%- for ics_raw_line in ics_lines -%}
+  {%- assign ics_line = ics_raw_line | strip -%}
+  {%- unless ics_line == "" -%}
+    {{- ics_line | slice: 0, 60 -}}{{- site.ics_newline -}}
+    {%- assign ics_extra = ics_line | size | minus: 1 | divided_by: 60 -%}
+    {%- if ics_extra > 0 -%}
+      {%- for ics_i in (1..ics_extra) -%}
+        {%- assign ics_from = ics_i | times: 60 -%}
+        {{- " " -}}{{- ics_line | slice: ics_from, 60 -}}{{- site.ics_newline -}}
+      {%- endfor -%}
+    {%- endif -%}
+  {%- endunless -%}
+{%- endfor -%}

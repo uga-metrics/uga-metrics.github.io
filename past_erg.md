@@ -1,3 +1,13 @@
+{% comment %}
+=============================================================================
+Title: Past reading group meetings
+Description: Econometrics Reading Group schedules from earlier semesters.
+Author: Brant Callaway
+Last update: 2026-11-04
+Date created: 2024-02-16
+=============================================================================
+{% endcomment %}
+
 ## Past ERG Meetings
 
 ### Spring 2026 Schedule
@@ -18,7 +28,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}
@@ -42,7 +52,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}
@@ -66,7 +76,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}
@@ -90,7 +100,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}
@@ -114,7 +124,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}
@@ -138,7 +148,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}
@@ -162,7 +172,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}
@@ -186,7 +196,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}
@@ -212,7 +222,7 @@
         <td>{{ presentation['start-time']}}--{{ presentation['end-time']}}</td>
         <td>{{ presentation.location }}</td>
         <td>{{ presentation.leader }}</td>
-        <td><a href="{{ presentation.link }}">{{ presentation.title }}</a></td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
       </tr>
     {% endif %}
   {% endfor %}

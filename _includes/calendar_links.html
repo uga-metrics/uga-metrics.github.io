@@ -1,0 +1,26 @@
+{%- comment -%}
+=============================================================================
+Title: Per-talk calendar links
+Description: Outlook and Google links that open a pre-filled event for one talk.
+  Arguments: series ("seminar" or "erg") and talk (one YAML entry).
+Author: Brant Callaway
+Last update: 2026-11-04
+Date created: 2026-11-04
+=============================================================================
+{%- endcomment -%}
+{%- include calendar_event_vars.html series=include.series talk=include.talk -%}
+
+{%- comment -%}
+url_encode writes spaces as "+", which some calendar pages show literally, so
+use %20. Literal plus signs are already %2B and are unaffected. "@" encodes to
+%40, which turns the "@@" line-break marker into %40%40.
+{%- endcomment -%}
+{%- assign link_subject = cal_summary | url_encode | replace: "+", "%20" -%}
+{%- assign link_details = cal_details | url_encode | replace: "+", "%20" | replace: "%40%40", "%0A" -%}
+{%- assign link_location = cal_location | url_encode | replace: "+", "%20" -%}
+{%- assign link_start = cal_start_iso | url_encode -%}
+{%- assign link_end = cal_end_iso | url_encode -%}
+
+<span class="cal-links">Add:
+<a href="https://outlook.office.com/calendar/0/deeplink/compose?path=%2Fcalendar%2Faction%2Fcompose&amp;rru=addevent&amp;subject={{ link_subject }}&amp;startdt={{ link_start }}&amp;enddt={{ link_end }}&amp;allday={% if cal_timed %}false{% else %}true{% endif %}&amp;location={{ link_location }}&amp;body={{ link_details }}" target="_blank" rel="noopener">Outlook</a> &middot;
+<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text={{ link_subject }}&amp;dates={{ cal_start_compact }}%2F{{ cal_end_compact }}&amp;ctz=America%2FNew_York&amp;location={{ link_location }}&amp;details={{ link_details }}" target="_blank" rel="noopener">Google</a></span>

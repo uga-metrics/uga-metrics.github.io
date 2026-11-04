@@ -1,0 +1,15 @@
+---
+layout: null
+permalink: /seminars.ics
+---
+{%- comment -%}
+=============================================================================
+Title: Seminar calendar feed
+Description: Subscribable calendar of econometrics seminars, built from
+  _data/seminars.yaml by _includes/ics_feed.txt.
+Author: Brant Callaway
+Last update: 2026-11-04
+Date created: 2026-11-04
+=============================================================================
+{%- endcomment -%}
+{%- include ics_feed.txt series="seminar" talks=site.data.seminars name="UGA Econometrics Seminars" -%}

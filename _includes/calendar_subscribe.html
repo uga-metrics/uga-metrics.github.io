@@ -1,0 +1,21 @@
+{%- comment -%}
+=============================================================================
+Title: Calendar subscribe buttons
+Description: Outlook and Google subscribe buttons for one feed, plus its plain
+  URL for Apple Calendar and as a fallback if a button does not work.
+  Arguments: feed (file name, e.g. "seminars.ics") and name (calendar name).
+Author: Brant Callaway
+Last update: 2026-11-04
+Date created: 2026-11-04
+=============================================================================
+{%- endcomment -%}
+{%- assign feed_https = site.url | append: "/" | append: include.feed -%}
+{%- assign feed_webcal = feed_https | replace: "https://", "webcal://" -%}
+{%- assign feed_webcal_encoded = feed_webcal | url_encode -%}
+{%- assign feed_name_encoded = include.name | url_encode | replace: "+", "%20" -%}
+<p class="cal-subscribe">
+  <strong>Subscribe:</strong>
+  <a class="cal-button" href="https://outlook.office.com/calendar/0/addfromweb?url={{ feed_webcal_encoded }}&amp;name={{ feed_name_encoded }}" target="_blank" rel="noopener">Outlook</a>
+  <a class="cal-button" href="https://calendar.google.com/calendar/render?cid={{ feed_webcal_encoded }}" target="_blank" rel="noopener">Google Calendar</a>
+  <span class="cal-feed">Other apps, or if a button doesn't work, add this URL: <a href="{{ feed_https }}">{{ feed_https }}</a></span>
+</p>

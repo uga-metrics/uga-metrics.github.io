@@ -1,3 +1,39 @@
+/* =============================================================================
+   Title: Site styles
+   Description: Schedule table layout and calendar subscribe/add link styling.
+   Author: Brant Callaway
+   Last update: 2026-11-04
+   Date created: 2024-02-16
+   ========================================================================== */
+
+/* --- Calendar links ------------------------------------------------------ */
+.cal-subscribe {
+  line-height: 2.2;
+}
+
+.cal-button {
+  display: inline-block;
+  padding: 0 0.7em;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  line-height: 1.8;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.cal-feed {
+  display: block;
+  line-height: 1.4;
+  font-size: 0.8em;
+  overflow-wrap: anywhere;
+}
+
+.cal-links {
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+/* --- Schedule tables ----------------------------------------------------- */
 .seminar-table-wrapper {
   width: 100%;
   overflow-x: auto;
@@ -13,13 +49,17 @@
 
 .seminar-table th,
 .seminar-table td {
-  white-space: nowrap;
   border: 1px solid #ddd;
+}
+
+/* Only date and time stay on one line, so all columns fit on a desktop screen. */
+.seminar-table td:nth-child(1),
+.seminar-table td:nth-child(2) {
+  white-space: nowrap;
 }
 
 .seminar-table th:last-child,
 .seminar-table td:last-child {
-  white-space: normal;
-  min-width: 250px;
+  min-width: 200px;
   border-right: 1px solid #ddd;
 }

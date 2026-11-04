@@ -1,0 +1,80 @@
+{%- comment -%}
+=============================================================================
+Title: Calendar event fields
+Description: Turns one talk from _data/ into the cal_* variables used by both
+  the .ics feeds and the per-talk links, so the two can never disagree.
+  Arguments: series ("seminar" or "erg") and talk (one YAML entry).
+Author: Brant Callaway
+Last update: 2026-11-04
+Date created: 2026-11-04
+=============================================================================
+{%- endcomment -%}
+{%- assign talk = include.talk -%}
+{%- assign cal_placeholders = "na,n/a,tba,tbd,---" | split: "," -%}
+
+{%- comment -%} --- Summary and details ---------------------------------- {%- endcomment -%}
+{%- comment -%} "@@" marks a line break; each output format replaces it below. {%- endcomment -%}
+{%- if include.series == "seminar" -%}
+  {%- assign cal_series_name = "Econometrics Seminar" -%}
+  {%- assign cal_person = talk.speaker | default: "" | strip -%}
+{%- else -%}
+  {%- assign cal_series_name = "ERG" -%}
+  {%- assign cal_person = talk.leader | default: "" | strip -%}
+{%- endif -%}
+
+{%- assign cal_key = cal_person | downcase -%}
+{%- assign cal_summary = cal_series_name -%}
+{%- unless cal_person == "" or cal_placeholders contains cal_key -%}
+  {%- assign cal_summary = cal_series_name | append: ": " | append: cal_person -%}
+{%- endunless -%}
+
+{%- assign cal_details = "" -%}
+{%- assign cal_key = talk.title | default: "na" | strip | downcase -%}
+{%- unless cal_placeholders contains cal_key -%}
+  {%- assign cal_details = cal_details | append: talk.title | append: "@@" -%}
+{%- endunless -%}
+{%- if include.series == "seminar" -%}
+  {%- assign cal_key = talk.affiliation | default: "na" | strip | downcase -%}
+  {%- unless cal_placeholders contains cal_key -%}
+    {%- assign cal_details = cal_details | append: "Affiliation: " | append: talk.affiliation | append: "@@" -%}
+  {%- endunless -%}
+  {%- assign cal_key = talk.host | default: "na" | strip | downcase -%}
+  {%- unless cal_placeholders contains cal_key -%}
+    {%- assign cal_details = cal_details | append: "Host: " | append: talk.host | append: "@@" -%}
+  {%- endunless -%}
+{%- endif -%}
+{%- if talk.link contains "://" -%}
+  {%- assign cal_details = cal_details | append: "Paper: " | append: talk.link | append: "@@" -%}
+{%- endif -%}
+{%- assign cal_details = cal_details | append: "Schedule: " | append: site.url | append: "/" -%}
+
+{%- assign cal_location = talk.location | default: "" | strip -%}
+
+{%- comment -%} --- Date and time ---------------------------------------- {%- endcomment -%}
+{%- assign cal_date = talk.date | date: "%Y-%m-%d" -%}
+{%- assign cal_date_compact = talk.date | date: "%Y%m%d" -%}
+{%- assign cal_start_time = talk['start-time'] | default: "" | strip -%}
+{%- assign cal_end_time = talk['end-time'] | default: "" | strip -%}
+
+{%- if cal_start_time != "" and cal_end_time != "" -%}
+  {%- assign cal_timed = true -%}
+  {%- assign cal_start_text = cal_date | append: " " | append: cal_start_time -%}
+  {%- assign cal_end_text = cal_date | append: " " | append: cal_end_time -%}
+  {%- assign cal_start_compact = cal_start_text | date: "%Y%m%dT%H%M%S" -%}
+  {%- assign cal_end_compact = cal_end_text | date: "%Y%m%dT%H%M%S" -%}
+  {%- comment -%} Uses the Eastern offset for that date, so daylight saving is handled by _config.yml's timezone. {%- endcomment -%}
+  {%- assign cal_start_iso = cal_start_text | date: "%Y-%m-%dT%H:%M:%S%:z" -%}
+  {%- assign cal_end_iso = cal_end_text | date: "%Y-%m-%dT%H:%M:%S%:z" -%}
+{%- else -%}
+  {%- comment -%}
+    Without both times, fall back to an all-day event. All-day end dates are
+    exclusive, so the end is the next day; starting from noon keeps the 24-hour
+    step on the right date even on a daylight-saving changeover.
+  {%- endcomment -%}
+  {%- assign cal_timed = false -%}
+  {%- assign cal_noon = cal_date | append: " 12:00" | date: "%s" | plus: 86400 -%}
+  {%- assign cal_start_compact = cal_date_compact -%}
+  {%- assign cal_end_compact = cal_noon | date: "%Y%m%d" -%}
+  {%- assign cal_start_iso = cal_date -%}
+  {%- assign cal_end_iso = cal_noon | date: "%Y-%m-%d" -%}
+{%- endif -%}

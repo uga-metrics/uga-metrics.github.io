@@ -1,4 +1,27 @@
+# =============================================================================
+# Title: Site configuration
+# Description: Jekyll settings, plus the current semester and calendar settings.
+# Author: Brant Callaway
+# Last update: 2026-11-04
+# Date created: 2024-02-16
+# =============================================================================
+
 title: Econometrics at UGA
 
+# Absolute URLs are needed because calendar apps fetch the feeds directly.
+url: "https://uga-metrics.github.io"
 
+# Lets calendar links use the correct Eastern offset, including daylight saving.
+timezone: America/New_York
 
+# --- Update each semester --------------------------------------------------
+# Semester shown on the home page. It must match "semester" in _data/ exactly.
+current_semester: "Fall 2026"
+
+# --- Calendar settings -----------------------------------------------------
+# Feeds include talks on or after this date, so earlier semesters are left out.
+# Leave this alone: talks added for later semesters are included automatically.
+calendar_start: "2026-08-01"
+
+# The calendar format requires CRLF line endings; Liquid cannot write them itself.
+ics_newline: "\r\n"

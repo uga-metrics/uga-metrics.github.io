@@ -1,5 +1,18 @@
+# =============================================================================
+# Title: Seminar schedule
+# Description: Econometrics seminars shown on the site and in seminars.ics.
+#   Talks from Fall 2026 onward should have start-time, end-time and location.
+#   A missing location is fine. A missing time makes it an all-day calendar event.
+# Author: Brant Callaway
+# Last update: 2026-11-04
+# Date created: 2024-02-19
+# =============================================================================
+
 - semester: "Fall 2026"
   date: "2026-09-29"
+  start-time: "2:55PM"
+  end-time: "4:15PM"
+  location: "Orkin Hall D107"
   speaker: "Jason Blevins"
   affiliation: "The Ohio State University"
   host: "Zhongjian Lin"
@@ -8,6 +21,9 @@
 
 - semester: "Fall 2026"
   date: "2026-10-02"
+  start-time: "12:00PM"
+  end-time: "1:00PM"
+  location: "Orkin Hall D107"
   speaker: "Yiqi Liu"
   affiliation: "Harvard Center of Mathematical Sciences and Applications"
   host: "Brantly Callaway"
@@ -16,6 +32,9 @@
 
 - semester: "Fall 2026"
   date: "2026-10-06"
+  start-time: "2:55PM"
+  end-time: "4:15PM"
+  location: "Orkin Hall D107"
   speaker: "Florian Gunsilius"
   affiliation: "Emory University"
   host: "Carolina Caetano"
@@ -24,6 +43,9 @@
 
 - semester: "Fall 2026"
   date: "2026-10-13"
+  start-time: "2:55PM"
+  end-time: "4:15PM"
+  location: "Orkin Hall D107"
   speaker: "Daniel Henderson"
   affiliation: "The University of Alabama"
   host: "Brantly Callaway"
@@ -32,6 +54,9 @@
 
 - semester: "Fall 2026"
   date: "2026-10-20"
+  start-time: "2:55PM"
+  end-time: "4:15PM"
+  location: "Orkin Hall D107"
   speaker: "Ivan Fernandez-Val"
   affiliation: "Boston University"
   host: "Brantly Callaway"
