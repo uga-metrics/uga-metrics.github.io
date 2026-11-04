@@ -3,14 +3,18 @@
 Title: Paper title with optional link
 Description: Links a talk's title only when its link is a real URL, so entries
   whose link is a placeholder ("---", "TBA", "TBD") do not produce broken links.
-  Arguments: link and title.
+  Arguments: link, title and optional na_text, which replaces a title of "NA".
 Author: Brant Callaway
 Last update: 2026-11-04
 Date created: 2026-11-04
 =============================================================================
 {%- endcomment -%}
+{%- assign paper_title = include.title -%}
+{%- if paper_title == "NA" and include.na_text -%}
+  {%- assign paper_title = include.na_text -%}
+{%- endif -%}
 {%- if include.link contains "://" -%}
-<a href="{{ include.link }}">{{ include.title }}</a>
+<a href="{{ include.link }}">{{ paper_title }}</a>
 {%- else -%}
-{{ include.title }}
+{{ paper_title }}
 {%- endif -%}

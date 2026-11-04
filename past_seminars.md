@@ -8,6 +8,8 @@ Date created: 2024-09-12
 =============================================================================
 {% endcomment %}
 
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
 ## Past Seminars
 
 ### Spring 2026 Schedule

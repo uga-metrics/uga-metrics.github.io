@@ -39,14 +39,14 @@ Economics faculty in the greater Atlanta/Athens area are welcome to attend. Ofte
   </tr>
   {% for seminar in site.data.seminars %}
     {% if seminar.semester == site.current_semester %}
-	<tr>
+	<tr data-talk-date="{{ seminar.date | date: '%Y-%m-%d' }}">
       		<td>{{ seminar.date | date: "%A, %b. %-d"}}<br>{% include calendar_links.html series="seminar" talk=seminar %}</td>
-      		<td>{% if seminar['start-time'] and seminar['end-time'] %}{{ seminar['start-time'] }}--{{ seminar['end-time'] }}{% else %}TBA{% endif %}</td>
+      		<td>{% if seminar['start-time'] and seminar['end-time'] %}{{ seminar['start-time'] }}&ndash;{{ seminar['end-time'] }}{% else %}TBA{% endif %}</td>
       		<td>{{ seminar.location | default: "TBA" }}</td>
       		<td>{{ seminar.speaker }}</td>
       		<td>{{ seminar.affiliation }}</td>
 		<td>{{ seminar.host }}</td>
-      		<td>{% include paper_link.html link=seminar.link title=seminar.title %}</td>
+      		<td>{% include paper_link.html link=seminar.link title=seminar.title na_text="TBA" %}</td>
     	</tr>
     {% endif %}
   {% endfor %}
@@ -67,7 +67,8 @@ The organizer for this semester is [Derek Dyal](https://www.terry.uga.edu/direct
 
 {% include calendar_subscribe.html feed="erg.ics" name="UGA Econometrics Reading Group" %}
 
-<table>
+<div class="seminar-table-wrapper">
+<table class="seminar-table">
   <tr>
     <th>Date</th>
     <th>Time</th>
@@ -77,15 +78,18 @@ The organizer for this semester is [Derek Dyal](https://www.terry.uga.edu/direct
   </tr>
   {% for presentation in site.data.erg %}
     {% if presentation.semester == site.current_semester %}
-      <tr>
+      <tr data-talk-date="{{ presentation.date | date: '%Y-%m-%d' }}">
         <td>{{ presentation.date | date: "%A, %b. %-d"}}<br>{% include calendar_links.html series="erg" talk=presentation %}</td>
-        <td>{% if presentation['start-time'] and presentation['end-time'] %}{{ presentation['start-time'] }}--{{ presentation['end-time'] }}{% else %}TBA{% endif %}</td>
+        <td>{% if presentation['start-time'] and presentation['end-time'] %}{{ presentation['start-time'] }}&ndash;{{ presentation['end-time'] }}{% else %}TBA{% endif %}</td>
         <td>{{ presentation.location | default: "TBA" }}</td>
         <td>{{ presentation.leader }}</td>
-        <td>{% include paper_link.html link=presentation.link title=presentation.title %}</td>
+        <td>{% include paper_link.html link=presentation.link title=presentation.title na_text="TBA" %}</td>
       </tr>
     {% endif %}
   {% endfor %}
 </table>
+</div>
 
 [[Past ERG Meetings](past_erg)]
+
+{% include mark_past_talks.html %}

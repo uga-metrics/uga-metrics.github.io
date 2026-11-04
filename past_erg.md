@@ -8,6 +8,8 @@ Date created: 2024-02-16
 =============================================================================
 {% endcomment %}
 
+<link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+
 ## Past ERG Meetings
 
 ### Spring 2026 Schedule

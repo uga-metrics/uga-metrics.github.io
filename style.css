@@ -1,24 +1,57 @@
 /* =============================================================================
    Title: Site styles
-   Description: Schedule table layout and calendar subscribe/add link styling.
+   Description: UGA accent color, schedule tables, past-talk styling and calendar
+     subscribe/add links.
    Author: Brant Callaway
    Last update: 2026-11-04
    Date created: 2024-02-16
    ========================================================================== */
 
+:root {
+  --accent: #ba0c2f; /* UGA Bulldog Red */
+  --past-text: #6a737d;
+  --panel-background: #f6f8fa;
+}
+
+/* --- Accent color -------------------------------------------------------- */
+.markdown-body a {
+  color: var(--accent);
+}
+
+.markdown-body h1 {
+  border-bottom: 2px solid var(--accent);
+}
+
+.markdown-body h2 {
+  border-bottom-color: var(--accent);
+}
+
 /* --- Calendar links ------------------------------------------------------ */
 .cal-subscribe {
+  padding: 0.6em 1em;
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  background: var(--panel-background);
   line-height: 2.2;
 }
 
-.cal-button {
+.markdown-body .cal-button {
   display: inline-block;
   padding: 0 0.7em;
   border: 1px solid currentColor;
   border-radius: 4px;
+  background: #fff;
   line-height: 1.8;
   font-size: 0.9em;
   white-space: nowrap;
+}
+
+/* The accent background needs light text for the hover state to stay readable. */
+.markdown-body .cal-button:hover {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
 }
 
 .cal-feed {
@@ -34,12 +67,17 @@
 }
 
 /* --- Schedule tables ----------------------------------------------------- */
+.markdown-body th {
+  text-align: left;
+}
+
 .seminar-table-wrapper {
   width: 100%;
   overflow-x: auto;
 }
 
-.seminar-table {
+.markdown-body .seminar-table {
+  display: table;
   width: 100%;
   min-width: 850px;
   table-layout: auto;
@@ -62,4 +100,18 @@
 .seminar-table td:last-child {
   min-width: 200px;
   border-right: 1px solid #ddd;
+}
+
+/* --- Past talks ---------------------------------------------------------- */
+/* _includes/mark_past_talks.html adds this class in the visitor's browser. */
+.talk-past td {
+  color: var(--past-text);
+}
+
+.markdown-body .talk-past a {
+  color: var(--past-text);
+}
+
+.talk-past .cal-links {
+  display: none;
 }

@@ -1,0 +1,26 @@
+{%- comment -%}
+=============================================================================
+Title: Mark past talks
+Description: Grays out talks dated before today and hides their calendar links.
+  This runs in the visitor's browser because the site is only rebuilt when it
+  changes, so the build cannot know today's date. Without JavaScript, every talk
+  simply appears normally. Rows need a data-talk-date attribute (YYYY-MM-DD).
+Author: Brant Callaway
+Last update: 2026-11-04
+Date created: 2026-11-04
+=============================================================================
+{%- endcomment -%}
+<script>
+  (function () {
+    var now = new Date();
+    var today = now.getFullYear() + "-" +
+      String(now.getMonth() + 1).padStart(2, "0") + "-" +
+      String(now.getDate()).padStart(2, "0");
+    // YYYY-MM-DD strings sort in date order, so a string comparison is enough.
+    document.querySelectorAll("tr[data-talk-date]").forEach(function (row) {
+      if (row.getAttribute("data-talk-date") < today) {
+        row.classList.add("talk-past");
+      }
+    });
+  })();
+</script>
