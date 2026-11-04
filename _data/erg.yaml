@@ -1,3 +1,12 @@
+# =============================================================================
+# Title: Reading group schedule
+# Description: Econometrics Reading Group meetings shown on the site and in erg.ics.
+#   A missing location is fine. A missing time makes it an all-day calendar event.
+# Author: Brant Callaway
+# Last update: 2026-11-04
+# Date created: 2024-02-16
+# =============================================================================
+
 - semester: "Fall 2022"
   date: "2022-09-16"
   start-time: "10:30"
@@ -302,4 +311,13 @@
   location: "Correll 442/Devore Conference Room"
   leader: "Fangzhi Luo"
   title: "TBD"
+  link: "---"
+
+- semester: "Fall 2026"
+  date: "2026-11-10"
+  start-time: "11:00AM"
+  end-time: "12:00PM"
+  location: "Correll 442/Devore Conference Room"
+  leader: "Brantly Callaway"
+  title: "Calendar test (not a real meeting)"
   link: "---"
