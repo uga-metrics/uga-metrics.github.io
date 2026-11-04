@@ -63,6 +63,17 @@
   title: "NA"
   link: "---"
 
+- semester: "Fall 2026"
+  date: "2026-11-10"
+  start-time: "2:55PM"
+  end-time: "4:15PM"
+  location: "Orkin Hall D107"
+  speaker: "Brantly Callaway"
+  affiliation: "University of Georgia"
+  host: "Brantly Callaway"
+  title: "Calendar test (not a real talk)"
+  link: "---"
+
 - semester: "Spring 2026"
   date: "2026-02-24"
   speaker: "Xun Tang"
