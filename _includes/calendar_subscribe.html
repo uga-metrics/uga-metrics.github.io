@@ -15,7 +15,7 @@ Date created: 2026-11-04
 {%- assign feed_name_encoded = include.name | url_encode | replace: "+", "%20" -%}
 <p class="cal-subscribe">
   <strong>Subscribe:</strong>
-  <a class="cal-button" href="https://outlook.office.com/calendar/0/addfromweb?url={{ feed_webcal_encoded }}&amp;name={{ feed_name_encoded }}" target="_blank" rel="noopener">Outlook</a>
-  <a class="cal-button" href="https://calendar.google.com/calendar/render?cid={{ feed_webcal_encoded }}" target="_blank" rel="noopener">Google Calendar</a>
+  <a class="cal-button" href="https://outlook.office.com/calendar/0/addfromweb?url={{ feed_webcal_encoded }}&amp;name={{ feed_name_encoded }}" target="_blank" rel="noopener">Outlook</a> &middot;
+  <a class="cal-button" href="https://calendar.google.com/calendar/render?cid={{ feed_webcal_encoded }}" target="_blank" rel="noopener">Google</a>
   <span class="cal-feed">Other apps, or if a button doesn't work, add this URL: <a href="{{ feed_https }}">{{ feed_https }}</a></span>
 </p>
